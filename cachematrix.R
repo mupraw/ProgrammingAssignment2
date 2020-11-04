@@ -1,7 +1,8 @@
-## Below is the function to produce an inverse of 2 x 2 matrix.  
-## functions do
+## Below is the function to produce an inverse of 2 x 2 matrix and re-calculate the initial matrix from inverse matrix
+## 
 
-## The function calculate inversible 2x2 matrix that comes with additional feature to prevent any error such as dimension of matrix is not 2x2 or determinat of the matrix is zero 
+## The function calculates inversible 2x2 matrix that comes with additional feature to reveal occured errors 
+## such as dimension of matrix is not 2x2 or determinat of the matrix is zero. 
 
 makeCacheMatrix <- function(x = matrix()) {
 y <- dim(x)
@@ -23,8 +24,10 @@ if(y[1] != 2 & y[2] != 2){
 }
 
 
-## Write a short comment describing this function
+## The function to retrieve the initial matrix X based on inverse matrix X obtained from makeCacheMatrix using following formula : inverse(inverse(X))
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+      mat <- makeCacheMatrix(x)
+        
+        return(mat)
 }
